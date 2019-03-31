@@ -26,24 +26,27 @@ package net.bplaced.clayn.d4j.api;
 import java.io.IOException;
 import java.util.List;
 import kong.unirest.Unirest;
-import net.bplaced.clayn.d4j.domain.Ninja;
+import net.bplaced.clayn.d4j.domain.Team;
 
 /**
  *
  * @author Clayn <clayn_osmato@gmx.de>
  */
-public class Test {
+public class Test
+{
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
-        NinjaServiceEndpoint end=new NinjaServiceEndpoint("http://clayn.bplaced.net/dentahl");
-        List<Ninja> ninjas=end.getNinjaList();
-        for(Ninja n:ninjas) {
-            System.out.println("Found: "+n);
+    public static void main(String[] args) throws IOException
+    {
+        TeamEndpoint end = new TeamEndpoint("http://clayn.bplaced.net/dentahl");
+        List<Team> teams = end.getTeams();
+        for (Team t : teams)
+        {
+            System.out.println("Found: " + t);
         }
         Unirest.shutDown();
     }
-    
+
 }

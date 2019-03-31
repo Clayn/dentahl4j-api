@@ -27,15 +27,19 @@ package net.bplaced.clayn.d4j.api;
  *
  * @author Clayn <clayn_osmato@gmx.de>
  */
-public abstract class ServiceEndPoint {
-    private final String baseUrl;
+public abstract class ServiceEndPoint
+{
 
-    public ServiceEndPoint(String baseUrl) {
+    protected final String baseUrl;
+
+    public ServiceEndPoint(String baseUrl)
+    {
         this.baseUrl = baseUrl;
     }
 
-    public String getBaseUrl() {
+    public String getBaseUrl()
+    {
         return baseUrl;
     }
-    
+
 }
